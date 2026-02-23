@@ -1,0 +1,148 @@
+.faq-contact-section {
+  background: #f4f4f4;
+  padding: 120px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.faq-contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* LEFT CARD */
+
+.contact-card {
+  background: #eaeaea;
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.contact-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.contact-card h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.contact-text {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #111;
+  color: white;
+}
+
+.contact-email {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mail-icon {
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.contact-email small {
+  color: #777;
+  display: block;
+}
+
+.contact-email p {
+  font-size: 14px;
+}
+
+/* FAQ SIDE */
+
+.faq-heading h2 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.faq-heading span {
+  color: #bbb;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 18px 0;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-icon {
+  font-size: 20px;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 15px;
+  color: #666;
+}
+
+/* ACTIVE STATE */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .faq-contact-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-heading h2 {
+    font-size: 30px;
+  }
+
+  .faq-contact-section {
+    padding: 80px 20px;
+  }
+}

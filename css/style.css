@@ -1,6 +1,10 @@
 @import "nav.css";
 @import "hero.css";
+@import "benefits.css";
+@import "about.css";
+@import "contact.css";
 @import "footer.css";
+
 
 
 * {

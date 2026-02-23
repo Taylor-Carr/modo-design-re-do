@@ -1,0 +1,140 @@
+/* ================= SECTION BASE ================= */
+
+.about-section {
+  background: #f3f3f3;
+  padding: 120px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= BIG HEADING ================= */
+
+.about-heading {
+  margin-bottom: 80px;
+}
+
+.about-heading h2 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  max-width: 1000px;
+}
+
+.about-heading .muted {
+  color: #b5b5b5;
+  font-weight: 400;
+}
+
+/* ================= LOWER GRID ================= */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.about-intro {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-body {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.about-pricing {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.price span {
+  display: block;
+  font-size: 14px;
+  color: #777;
+}
+
+.price strong {
+  font-size: 20px;
+}
+
+.about-btn {
+  background: #111;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  opacity: 0.85;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.about-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #777;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+
+  .about-heading h2 {
+    font-size: 48px;
+  }
+
+  .about-content {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about-heading h2 {
+    font-size: 34px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-section {
+    padding: 80px 20px;
+  }
+
+  .about-pricing {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
