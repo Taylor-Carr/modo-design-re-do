@@ -47,8 +47,12 @@
 </script>
 </head>
 <body>
+
 <nav class="nav">
-  <div class="logo">MODO STUDIO</div>
+  <div class="logo">
+    <span class="logo-text">MODO STUDIO</span>
+    <img src="/images/nav logo.png" alt="Logo" class="logo-img">
+  </div>
 
   <div class="nav-right">
 
@@ -60,64 +64,24 @@
 <section class="hero">
   <div class="hero-top">
     <h1 class="hero-title">
-      We design, build & host websites for businesses in Bristol
+      <span class="line"><span>We design, build and host websites</span></span>
+      <span class="line"><span>for businesses, tradespeople</span></span>
+      <span class="line"><span>and charities</span></span>
     </h1>
   </div>
 
   <div class="hero-image-wrapper">
-    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=2070&auto=format&fit=crop" alt="Hero Visual">
+  <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=2070&auto=format&fit=crop" alt="Hero Visual">
+
+  <div class="hero-overlay"></div>
+    
+  <div class="hero-image-text">
+    <h2 class="rotating-text">
+      <span id="changing-text">Built for growth</span>
+    </h2>
+      <p>Fast, modern websites that convert</p>
   </div>
-</section>
-
-<section class="benefits-section">
-  <div class="benefits-container">
-
-    <div class="benefits-header">
-      <div class="benefits-left">
-        <span class="benefits-tag">OUR BENEFITS</span>
-        <h2>Everything your team<br>needs — nothing you don’t</h2>
-      </div>
-
-      <div class="benefits-right">
-        <p>
-          Everything you need to manage your team today, and scale smoothly as you grow.
-        </p>
-        <a href="#" class="benefits-btn">Learn more</a>
-      </div>
-    </div>
-
-    <div class="benefits-grid">
-
-      <div class="benefit-card">
-        <div class="benefit-icon">⟳</div>
-        <h3>Centralized people data</h3>
-        <p>
-          All employee information in one secure workspace.
-          Clear, organized, and always accessible.
-        </p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon">💬</div>
-        <h3>Human support that matters</h3>
-        <p>
-          Get real assistance from people who understand
-          payroll and people operations.
-        </p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-icon">⏱</div>
-        <h3>Designed to save time</h3>
-        <p>
-          Automate repetitive tasks and focus on building your
-          business, not admin work.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
+</div>
 </section>
 
 <section class="about-section">
@@ -126,9 +90,9 @@
     <!-- BIG HEADLINE -->
     <div class="about-heading">
       <h2>
-        The design dream team for founders obsessed with shipping fast.
+        Professional web design in Bristol, built to win work.
         <span class="muted">
-          Our clients raised over $600M+ in 2024 alone.
+          Choose a one-off build or an all inclusive monthly plan.
         </span>
       </h2>
     </div>
@@ -139,37 +103,149 @@
       <!-- LEFT SIDE -->
       <div class="about-left">
         <p class="about-intro">
-          Over 18 years grinding alongside founders with a chip on their shoulder
-          and a story that needs telling.
+          We create high-quality websites for Bristol small businesses and trades 
+          who want something professional, reliable and built properly.
         </p>
 
         <p class="about-body">
-          Off Menu is the design partner teams turn to when speed and quality
-          matter most. Our approach is fast and flexible — purpose built for
-          startup speed.
+          From strategy and design to development and launch, everything is handled in-house. 
+          You can pay a one-off project fee and manage hosting separately, or choose a 
+          simple monthly plan that includes hosting, maintenance and ongoing support. 
+          No jargon. No hidden costs. Just a website that works.
         </p>
 
         <div class="about-pricing">
           <div class="price">
-            <span>Projects start at</span>
-            <strong>$8,000/mo</strong>
+            <span>Websites from</span>
+            <strong>£25 per month</strong>
           </div>
 
-          <a href="#" class="about-btn">View Pricing →</a>
+          <a href="#pricing" class="about-btn">View Pricing →</a>
         </div>
       </div>
 
       <!-- RIGHT SIDE -->
       <div class="about-right">
         <ul class="about-list">
-          <li>Design a brand worth remembering</li>
-          <li>Story-driven web experiences that convert</li>
-          <li>Pitch decks for 9-figure raises, literally</li>
-          <li>Dedicated product designers</li>
-          <li>Output focused design sprints</li>
+          <li>Fully custom, conversion-focused design</li>
+          <li>Fast, mobile-optimised and SEO-ready</li>
+          <li>Clear pricing — one-off or monthly</li>
+          <li>Secure hosting & management available</li>
+          <li>Ongoing updates as your business grows</li>
         </ul>
       </div>
 
+    </div>
+
+  </div>
+</section>
+
+<section class="pricing-section">
+  <div class="pricing-bg-text">Pricing</div>
+
+  <div class="pricing-container">
+
+    <!-- LEFT SIDE -->
+    <div class="pricing-left">
+      <h2 class="pricing-title">
+        Our pricing is <span class="dark">transparent</span>, just
+        <span class="light">like our process.</span>
+      </h2>
+
+      <div class="testimonial">
+        <p class="testimonial-title">The 5 Types of Wealth</p>
+
+        <p class="testimonial-body">
+          “For us it has been important to find a creative partner —
+          a team we can trust to deliver quality work on time,
+          even with short notices.”
+        </p>
+
+        <div class="testimonial-author">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
+          <div>
+            <strong>Sahil Bloom</strong>
+            <span>Author, The 5 Types of Wealth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="pricing-right">
+
+      <div class="pricing-toggle">
+        <button class="toggle active" data-plan="monthly">
+          Monthly $8,000/mo
+        </button>
+        <button class="toggle" data-plan="custom">
+          Custom Starts at $20,000
+        </button>
+      </div>
+
+      <!-- MONTHLY CARD -->
+      <div class="pricing-card active" id="monthly">
+        <h3>Monthly Design Retainer</h3>
+
+        <ul>
+          <li>Ongoing design support for any project</li>
+          <li>Custom development or no-code (limits apply)</li>
+          <li>Clear timeline and milestone deliverables</li>
+          <li>Expert project manager & weekly async updates</li>
+        </ul>
+
+        <div class="price-row">
+          <div class="price">
+            <strong>$8,000</strong>
+            <span>per month<br>billed monthly</span>
+          </div>
+
+          <a href="#" class="pricing-btn">Get Started →</a>
+        </div>
+      </div>
+
+      <!-- CUSTOM CARD -->
+      <div class="pricing-card" id="custom">
+        <h3>Custom Project Build</h3>
+
+        <ul>
+          <li>Full website or product build</li>
+          <li>UX strategy & conversion optimisation</li>
+          <li>Custom integrations</li>
+          <li>Performance & SEO optimisation</li>
+        </ul>
+
+        <div class="price-row">
+          <div class="price">
+            <strong>From $20,000</strong>
+            <span>fixed project pricing</span>
+          </div>
+
+          <a href="#" class="pricing-btn">Book a Strategy Call →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="benefits-section">
+  <div class="benefits-container">
+
+    <div class="benefits-header">
+      <div class="benefits-left">
+        <h2 class="benefits-heading">Professional websites<br>without the usual hassle</h2>
+      </div>
+
+      <div class="benefits-right">
+        <p>
+          Whether you choose a one-off build or a monthly plan with hosting and management included, 
+          we make the entire process simple, clear and stress-free.
+        </p>
+        <a href="#pricing" class="benefits-btn">View Pricing</a>
+      </div>
     </div>
 
   </div>
@@ -182,18 +258,21 @@
     <div class="contact-card">
       <img src="https://i.pravatar.cc/80" alt="Profile" class="contact-avatar">
 
-      <h3>Book an intro call</h3>
+      <h3>Start your project</h3>
       <p class="contact-text">
-        Time to get introduced and explore how Off Menu can help.
+        Let’s discuss your website, your goals, and whether a one-off build 
+        or monthly plan is the right fit for your business.
       </p>
 
-      <a href="#" class="contact-btn">Book a Call →</a>
+      <a href="mailto:taylor@modostudio.co.uk?subject=Project%20Enquiry" class="contact-btn">
+        Start a Conversation →
+      </a>
 
       <div class="contact-email">
         <span class="mail-icon">✉</span>
         <div>
-          <small>Do you prefer email communication?</small>
-          <p>christian@offmenu.design</p>
+          <small>Prefer email?</small>
+          <p>taylor@modostudio.co.uk</p>
         </div>
       </div>
     </div>
@@ -208,61 +287,54 @@
 
         <div class="faq-item">
           <button class="faq-question">
-            What's the Off Menu delivery process?
+            Do I have to choose the monthly plan?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>We operate in structured sprints with clear deliverables and weekly updates.</p>
+            <p>
+              No. You can choose a one-off website build and arrange hosting 
+              separately, or select our monthly plan which includes hosting, 
+              management and ongoing support.
+            </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            How does the Monthly Retainer work?
+            What’s included in the monthly plan?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>You get ongoing access to our design team with predictable pricing.</p>
+            <p>
+              Hosting, domain management, security, backups, updates and ongoing 
+              support are all included — with no long-term contracts.
+            </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            What if I'm not happy with the work?
+            How long does it take to build my website?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>We refine until you're satisfied — collaboration is key.</p>
+            <p>
+              Most projects are completed within a few weeks, depending on the 
+              size and how quickly content is approved.
+            </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            How do I share feedback?
+            Can I request changes after launch?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>We use collaborative tools to keep everything streamlined.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Is there a limit to how much I can ask for?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>No hard limits — we prioritise based on impact and scope.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            Can we have calls?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Absolutely. We schedule regular calls to stay aligned.</p>
+            <p>
+              Yes. If you’re on a monthly plan, updates are included. 
+              For one-off builds, we can provide ongoing support whenever you need it.
+            </p>
           </div>
         </div>
 
@@ -271,6 +343,35 @@
 
   </div>
 </section>
+
+<footer class="big-footer">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <div class="footer-col">
+        <a href="#">Overview</a>
+        <a href="#">Work</a>
+        <a href="#">Approach</a>
+        <a href="#">About</a>
+      </div>
+
+      <div class="footer-col">
+
+      </div>
+
+      <div class="footer-col footer-right">
+        <p>Copyright © 2026 Modo Studio</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <h2>MODO STUDIO®</h2>
+    </div>
+
+  </div>
+</footer>
 
 </body>
 <script src="/js/script.js"></script>

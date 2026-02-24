@@ -1,28 +1,40 @@
 /* ================= SECTION BASE ================= */
 
 .about-section {
-  background: #f3f3f3;
-  padding: 120px 20px;
+  padding: 40px 20px 20px 20px;
+  margin-bottom: 50px;
   font-family: 'Inter', sans-serif;
 }
 
 .about-container {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
 /* ================= BIG HEADING ================= */
 
 .about-heading {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
+
+
 .about-heading h2 {
-  font-size: 64px;
+   font-size: 54px;
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -1px;
-  max-width: 1000px;
+  max-width: 890px;
+  background: linear-gradient(
+    135deg,
+    #2b2b2b 0%,
+    #6f6f6f 40%,
+    #f5f5f5 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .about-heading .muted {
@@ -30,22 +42,24 @@
   font-weight: 400;
 }
 
-/* ================= LOWER GRID ================= */
-
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
 }
 
-/* ================= LEFT SIDE ================= */
+/*Left side */
 
 .about-intro {
+  max-width: 500px;
+   margin-top: 20px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 .about-body {
+  max-width: 500px;
+  font-weight: 600;
   color: #666;
   line-height: 1.6;
   margin-bottom: 40px;
@@ -58,18 +72,33 @@
 }
 
 .price span {
+  font-weight: 600;
   display: block;
   font-size: 14px;
   color: #777;
 }
 
 .price strong {
+  display: block;
   font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    135deg,
+    #2b2b2b 0%,
+    #6f6f6f 50%,
+    #f5f5f5 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .about-btn {
   background: #111;
   color: #fff;
+  opacity: 0.8;
   padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
@@ -81,7 +110,6 @@
   opacity: 0.85;
 }
 
-/* ================= RIGHT SIDE ================= */
 
 .about-list {
   list-style: none;
@@ -90,7 +118,8 @@
 }
 
 .about-list li {
-  padding: 18px 0;
+  font-weight: 600;
+  padding: 15px 0;
   border-bottom: 1px solid #e1e1e1;
   font-size: 15px;
   position: relative;
@@ -104,7 +133,6 @@
   color: #777;
 }
 
-/* ================= RESPONSIVE ================= */
 
 @media (max-width: 1024px) {
 

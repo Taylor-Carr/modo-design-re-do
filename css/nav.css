@@ -8,11 +8,53 @@
   width: 100%;
 }
 
+
 .logo {
+  position: relative;
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 2px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
+
+/* Text version */
+
+.logo-text {
+  transition: 
+    opacity 0.35s cubic-bezier(.22,1,.36,1),
+    transform 0.35s cubic-bezier(.22,1,.36,1);
+}
+
+/* Image version */
+
+.logo-img {
+  padding: 15px 0;
+  position: absolute;
+  margin-left: 2px;
+  height: 60px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: 
+    opacity 0.35s cubic-bezier(.22,1,.36,1),
+    transform 0.35s cubic-bezier(.22,1,.36,1);
+}
+
+/* When scrolled */
+
+.nav.scrolled .logo-text {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.nav.scrolled .logo-img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Existing styles (unchanged) */
 
 .nav-right {
   display: flex;

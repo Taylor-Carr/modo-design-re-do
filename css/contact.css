@@ -1,19 +1,16 @@
 .faq-contact-section {
-  background: #f4f4f4;
-  padding: 120px 20px;
+  padding: 40px 20px;
   font-family: 'Inter', sans-serif;
 }
 
 .faq-contact-container {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 420px 1fr;
   gap: 80px;
   align-items: start;
 }
-
-/* LEFT CARD */
 
 .contact-card {
   background: #eaeaea;

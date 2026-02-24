@@ -1,5 +1,5 @@
 .hero {
-  padding: 20px 20px 80px;
+  padding: 20px 20px 40px;
 }
 
 .hero-top {
@@ -7,20 +7,33 @@
   justify-content: center;
 }
 
+
 .hero-title {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 400;
   line-height: 1.2;
-  max-width: 500px;
+  max-width: 610px;
   margin-bottom: 20px;
-  margin-right: 80px;
+  margin-right: 70px;
+ 
 }
 
-.hero-image-wrapper {
-  width: 100%;
-  border-radius: 24px;
+.hero-title .line {
+  display: block;
   overflow: hidden;
-  height:70vh;
+}
+
+.hero-title .line span {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 1s cubic-bezier(.16,1,.3,1),
+              opacity 1s cubic-bezier(.16,1,.3,1);
+}
+
+.hero-title.reveal .line span {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .hero-image-wrapper img {
@@ -30,6 +43,56 @@
   display: block;
 }
 
+.hero-image-wrapper {
+  position: relative; 
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.09);
+  z-index: 1;
+}
+
+.hero-image-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 2;
+  color: white;
+  max-width: none;
+  width: auto;
+  white-space: nowrap;
+}
+
+.hero-image-text h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.hero-image-text p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.rotating-text {
+  position: relative;
+  height: 42px;
+}
+
+#changing-text {
+  position: absolute;
+  transition: 
+    transform 0.6s cubic-bezier(.16,1,.3,1),
+    opacity 0.4s ease;
+}
 
 @media (max-width: 1024px) {
   .hero-title {

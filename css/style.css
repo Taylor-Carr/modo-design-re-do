@@ -1,5 +1,6 @@
 @import "nav.css";
 @import "hero.css";
+@import "pricing.css";
 @import "benefits.css";
 @import "about.css";
 @import "contact.css";
@@ -15,6 +16,6 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #f3f3f5;
+  background: #f3f3f3;
   color: #111;
 }
