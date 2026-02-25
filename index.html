@@ -48,18 +48,38 @@
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" id="navbar">
   <div class="logo">
     <span class="logo-text">MODO STUDIO</span>
-    <img src="/images/nav logo.png" alt="Logo" class="logo-img">
   </div>
 
   <div class="nav-right">
+    <button class="pill-btn talk-btn">LET'S CHAT</button>
 
-    <button class="pill-btn talk-btn">LET'S TALK</button>
-    <button class="pill-btn menu-btn" id="menuToggle">MENU</button>
+    <button class="pill-btn menu-btn" id="menuToggle">
+      <span class="menu-label">
+        <span class="menu-word menu-open active">MENU</span>
+        <span class="menu-word menu-close">CLOSE</span>
+      </span>
+      <img src="/images/new new menu icon v.png" alt="" class="menu-icon">
+    </button>
   </div>
 </nav>
+
+<div class="nav-dropdown" id="navDropdown">
+  <div class="dropdown-inner">
+    <div class="dropdown-links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+
+    <div class="dropdown-labs">
+      <a href="#">LABS ↗</a>
+    </div>
+  </div>
+</div>
 
 <section class="hero">
   <div class="hero-top">
@@ -90,7 +110,7 @@
     <!-- BIG HEADLINE -->
     <div class="about-heading">
       <h2>
-        Professional web design in Bristol, built to win work.
+        Professional web designers based in Bristol.
         <span class="muted">
           Choose a one-off build or an all inclusive monthly plan.
         </span>

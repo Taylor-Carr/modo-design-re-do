@@ -1,9 +1,6 @@
-// Simple menu toggle placeholder
-document.getElementById("menuToggle").addEventListener("click", function() {
-  alert("Menu functionality coming next.");
-});
-
-//h1 hero / nav
+/* ==================================
+   HERO MAIN H1 STAGGER ANIMATION
+================================== */
 window.addEventListener("load", () => {
   const lines = document.querySelectorAll(".hero-title .line span");
 
@@ -11,67 +8,122 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       line.style.transform = "translateY(0)";
       line.style.opacity = "1";
-    }, index * 180); // adjust speed here
+    }, index * 180);
   });
 });
 
-//nav logo change 
-const nav = document.querySelector('.nav');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
-});
-
-
-//hero text scroll 
+/* ==================================
+   HERO CARD ROTATING TEXT
+================================== */
 const phrases = [
   "Built for growth",
   "Designed to convert",
   "Made for visibility"
 ];
 
-const text = document.getElementById("changing-text");
-let i = 0;
+const changingText = document.getElementById("changing-text");
 
-setInterval(() => {
-  text.style.opacity = 0;
-  text.style.transform = "translateY(-15px)";
+if (changingText) {
+  let i = 0;
 
-  setTimeout(() => {
-    i = (i + 1) % phrases.length;
-    text.textContent = phrases[i];
-    text.style.transform = "translateY(15px)";
-  }, 300);
+  setInterval(() => {
+    changingText.style.opacity = 0;
+    changingText.style.transform = "translateY(-15px)";
 
-  setTimeout(() => {
-    text.style.opacity = 1;
-    text.style.transform = "translateY(0)";
-  }, 320);
+    setTimeout(() => {
+      i = (i + 1) % phrases.length;
+      changingText.textContent = phrases[i];
+      changingText.style.transform = "translateY(15px)";
+    }, 300);
 
-}, 2800);
+    setTimeout(() => {
+      changingText.style.opacity = 1;
+      changingText.style.transform = "translateY(0)";
+    }, 320);
 
-// toggle for pricing section
-  const buttons = document.querySelectorAll(".toggle");
-  const cards = document.querySelectorAll(".pricing-card");
+  }, 2800);
+}
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
 
-      // remove active state
-      buttons.forEach(btn => btn.classList.remove("active"));
-      cards.forEach(card => card.classList.remove("active"));
+/* ==================================
+   NAV SCROLL STATE
+================================== */
+const navbar = document.getElementById("navbar");
 
-      // activate clicked button
-      button.classList.add("active");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
 
-      // show matching card
-      const plan = button.dataset.plan;
-      document.getElementById(plan).classList.add("active");
+  // Close menu if user scrolls
+  if (navDropdown.classList.contains("active")) {
+    closeMenu();
+  }
+});
 
-    });
-  });
 
+/* ==================================
+   MENU TOGGLE LOGIC
+================================== */
+const menuToggle = document.getElementById("menuToggle");
+const navDropdown = document.getElementById("navDropdown");
+
+const menuOpen = document.querySelector(".menu-open");
+const menuClose = document.querySelector(".menu-close");
+
+menuToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  if (navDropdown.classList.contains("active")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+function openMenu() {
+  navDropdown.classList.add("active");
+  menuOpen.classList.remove("active");
+  menuClose.classList.add("active");
+}
+
+function closeMenu() {
+  navDropdown.classList.remove("active");
+  menuClose.classList.remove("active");
+  menuOpen.classList.add("active");
+}
+
+
+/* ==================================
+   CLOSE WHEN CLICKING OUTSIDE
+================================== */
+document.addEventListener("click", (e) => {
+  if (
+    navDropdown.classList.contains("active") &&
+    !navDropdown.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    closeMenu();
+  }
+});
+
+
+/* ==================================
+   AUTO ACTIVE LINK BASED ON URL
+================================== */
+const links = document.querySelectorAll(".dropdown-links a");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+  const linkPath = link.getAttribute("href");
+
+  if (
+    linkPath === currentPage ||
+    (currentPage === "" && linkPath === "index.html")
+  ) {
+    link.classList.add("active");
+  }
+});
