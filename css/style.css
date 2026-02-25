@@ -6,7 +6,7 @@
 @import "contact.css";
 @import "footer.css";
 
-
+@import "pages/design.css";
 
 * {
   margin: 0;

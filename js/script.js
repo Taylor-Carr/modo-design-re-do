@@ -13,9 +13,8 @@ window.addEventListener("load", () => {
 });
 
 
-/* ==================================
-   HERO CARD ROTATING TEXT
-================================== */
+// HERO CARD ROTATING TEXT
+
 const phrases = [
   "Built for growth",
   "Designed to convert",
@@ -73,27 +72,35 @@ const navDropdown = document.getElementById("navDropdown");
 
 const menuOpen = document.querySelector(".menu-open");
 const menuClose = document.querySelector(".menu-close");
+const menuIcon = document.querySelector(".menu-icon");
 
 menuToggle.addEventListener("click", (e) => {
   e.stopPropagation();
 
-  if (navDropdown.classList.contains("active")) {
+  const isOpen = navDropdown.classList.contains("active");
+
+  if (isOpen) {
     closeMenu();
   } else {
     openMenu();
   }
+
+  // Toggle rotation on the button
+  menuToggle.classList.toggle("active");
 });
 
 function openMenu() {
   navDropdown.classList.add("active");
-  menuOpen.classList.remove("active");
-  menuClose.classList.add("active");
+
+  if (menuOpen) menuOpen.classList.remove("active");
+  if (menuClose) menuClose.classList.add("active");
 }
 
 function closeMenu() {
   navDropdown.classList.remove("active");
-  menuClose.classList.remove("active");
-  menuOpen.classList.add("active");
+
+  if (menuClose) menuClose.classList.remove("active");
+  if (menuOpen) menuOpen.classList.add("active");
 }
 
 

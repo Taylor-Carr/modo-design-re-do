@@ -102,6 +102,11 @@
 .menu-icon {
   width: 5px;
   height: 12px;
+  transition: transform 0.3s ease;
+}
+
+#menuToggle.active .menu-icon {
+  transform: rotate(90deg);
 }
 
 .nav-dropdown.active {
@@ -154,7 +159,7 @@
 }
 
 .dropdown-links a:hover {
-  transform: translateX(4px);
+  transform: translateX(1px);
 }
 
 

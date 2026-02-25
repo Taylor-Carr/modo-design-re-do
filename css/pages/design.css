@@ -1,19 +1,35 @@
-.about-section {
-  padding: 40px 20px 20px 20px;
-  margin-bottom: 50px;
+.design-section {
+  position: relative;
+  padding: 80px 20px 140px 20px;
+  overflow: hidden;
   font-family: 'Inter', sans-serif;
 }
 
-.about-container {
+.design-bg-text {
+  margin-top: 10px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 390px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.04);
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.design-container {
   max-width: 1250px;
   margin: 0 auto;
 }
 
-.about-heading {
+
+.design-heading {
   margin-bottom: 60px;
 }
 
-.about-heading h2 {
+.design-heading h2 {
    font-size: 54px;
   font-weight: 500;
   line-height: 1.15;
@@ -31,26 +47,25 @@
   color: transparent;
 }
 
-.about-heading .muted {
+.design-heading .design-muted {
   color: #b5b5b5;
   font-weight: 400;
 }
 
-.about-content {
+.design-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
 }
 
-
-.about-intro {
+.design-intro {
   max-width: 500px;
    margin-top: 20px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.about-body {
+.design-body {
   max-width: 500px;
   font-weight: 600;
   color: #666;
@@ -58,20 +73,20 @@
   margin-bottom: 40px;
 }
 
-.about-pricing {
+.design-pricing {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-.price span {
+.design-price span {
   font-weight: 600;
   display: block;
   font-size: 14px;
   color: #777;
 }
 
-.price strong {
+.design-price strong {
   display: block;
   font-size: 20px;
   font-weight: 600;
@@ -88,7 +103,7 @@
   color: transparent;
 }
 
-.about-btn {
+.design-btn {
   background: #111;
   color: #fff;
   opacity: 0.8;
@@ -99,18 +114,17 @@
   transition: all 0.3s ease;
 }
 
-.about-btn:hover {
+.design-btn:hover {
   opacity: 0.85;
 }
 
-
-.about-list {
+.design-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.about-list li {
+.design-list li {
   font-weight: 600;
   padding: 15px 0;
   border-bottom: 1px solid #e1e1e1;
@@ -119,7 +133,7 @@
   padding-left: 30px;
 }
 
-.about-list li::before {
+.design-list li::before {
   content: "→";
   position: absolute;
   left: 0;
@@ -129,31 +143,31 @@
 
 @media (max-width: 1024px) {
 
-  .about-heading h2 {
+  .design-heading h2 {
     font-size: 48px;
   }
 
-  .about-content {
+  .design-content {
     gap: 50px;
   }
 }
 
 @media (max-width: 768px) {
 
-  .about-heading h2 {
+  .design-heading h2 {
     font-size: 34px;
   }
 
-  .about-content {
+  .design-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .about-section {
+  .design-section {
     padding: 80px 20px;
   }
 
-  .about-pricing {
+  .design-pricing {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
