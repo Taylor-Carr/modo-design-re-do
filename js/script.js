@@ -1,6 +1,5 @@
-/* ==================================
-   HERO MAIN H1 STAGGER ANIMATION
-================================== */
+// HERO MAIN H1 STAGGER ANIMATION
+
 window.addEventListener("load", () => {
   const lines = document.querySelectorAll(".hero-title .line span");
 
@@ -45,9 +44,8 @@ if (changingText) {
 }
 
 
-/* ==================================
-   NAV SCROLL STATE
-================================== */
+// NAV SCROLL STATE
+
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -64,9 +62,8 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* ==================================
-   MENU TOGGLE LOGIC
-================================== */
+// MENU TOGGLE LOGIC
+
 const menuToggle = document.getElementById("menuToggle");
 const navDropdown = document.getElementById("navDropdown");
 
@@ -104,9 +101,8 @@ function closeMenu() {
 }
 
 
-/* ==================================
-   CLOSE WHEN CLICKING OUTSIDE
-================================== */
+//CLOSE WHEN CLICKING OUTSIDE
+
 document.addEventListener("click", (e) => {
   if (
     navDropdown.classList.contains("active") &&
@@ -117,10 +113,8 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// AUTO ACTIVE LINK BASED ON URL
 
-/* ==================================
-   AUTO ACTIVE LINK BASED ON URL
-================================== */
 const links = document.querySelectorAll(".dropdown-links a");
 const currentPage = window.location.pathname.split("/").pop();
 
@@ -134,3 +128,93 @@ links.forEach(link => {
     link.classList.add("active");
   }
 });
+
+// toggle for pricing section
+  const buttons = document.querySelectorAll(".toggle");
+  const cards = document.querySelectorAll(".pricing-card");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+
+      // remove active state
+      buttons.forEach(btn => btn.classList.remove("active"));
+      cards.forEach(card => card.classList.remove("active"));
+
+      // activate clicked button
+      button.classList.add("active");
+
+      // show matching card
+      const plan = button.dataset.plan;
+      document.getElementById(plan).classList.add("active");
+
+    });
+  });
+
+  //caorusel for design page 
+  (function () {
+  const csTrack = document.getElementById("csTrack");
+  const csPrevBtn = document.getElementById("csPrevBtn");
+  const csNextBtn = document.getElementById("csNextBtn");
+
+  function csCardStepPx() {
+    const first = csTrack.querySelector(".cs-card");
+    if (!first) return 320;
+
+    const styles = getComputedStyle(csTrack);
+    const gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
+
+    return first.getBoundingClientRect().width + gap;
+  }
+
+  function csUpdateButtons() {
+    const maxScrollLeft = csTrack.scrollWidth - csTrack.clientWidth - 2;
+    csPrevBtn.disabled = csTrack.scrollLeft <= 2;
+    csNextBtn.disabled = csTrack.scrollLeft >= maxScrollLeft;
+  }
+
+  function csScrollByCard(dir) {
+    csTrack.scrollBy({ left: dir * csCardStepPx(), behavior: "smooth" });
+  }
+
+  csPrevBtn.addEventListener("click", () => csScrollByCard(-1));
+  csNextBtn.addEventListener("click", () => csScrollByCard(1));
+  csTrack.addEventListener("scroll", csUpdateButtons, { passive: true });
+  window.addEventListener("resize", csUpdateButtons);
+
+  // drag-to-scroll
+  let csIsDown = false;
+  let csStartX = 0;
+  let csStartScrollLeft = 0;
+
+  csTrack.addEventListener("pointerdown", (e) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    csIsDown = true;
+    csTrack.setPointerCapture(e.pointerId);
+    csStartX = e.clientX;
+    csStartScrollLeft = csTrack.scrollLeft;
+    csTrack.style.scrollBehavior = "auto";
+  });
+
+  csTrack.addEventListener("pointermove", (e) => {
+    if (!csIsDown) return;
+    const dx = e.clientX - csStartX;
+    csTrack.scrollLeft = csStartScrollLeft - dx;
+  });
+
+  function csEndDrag() {
+    if (!csIsDown) return;
+    csIsDown = false;
+    csTrack.style.scrollBehavior = "smooth";
+
+    // settle snap in some browsers
+    csTrack.scrollBy({ left: 0, behavior: "smooth" });
+    csUpdateButtons();
+  }
+
+  csTrack.addEventListener("pointerup", csEndDrag);
+  csTrack.addEventListener("pointercancel", csEndDrag);
+  csTrack.addEventListener("pointerleave", csEndDrag);
+
+  // initial state
+  csUpdateButtons();
+})();

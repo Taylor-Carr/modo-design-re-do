@@ -1,5 +1,7 @@
 .hero {
   padding: 20px 20px 40px;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .hero-top {
@@ -61,7 +63,7 @@
 
 .hero-image-text {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   left: 30px;
   z-index: 2;
   color: white;
@@ -95,11 +97,48 @@
     opacity 0.4s ease;
 }
 
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 38px;
+/* Large desktop */
+@media (min-width: 1440px) {
+  .hero {
+    padding: 10px 20px 80px;
+  }
+
+  
+
+  .hero-image-wrapper {
+    height: 40vh;
+  }
+
+  .hero-image-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-image-text p {
+    font-size: 16px;
   }
 }
+
+
+/* Ultra-wide screens */
+@media (min-width: 1800px) {
+  .hero {
+    max-width: 1300px;
+  }
+
+  .hero-image-wrapper {
+    height: 40vh;
+    border-radius: 32px;
+  }
+
+  .hero-image-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-image-text p {
+    font-size: 16px;
+  }
+}
+
 
 @media (max-width: 768px) {
   .hero {
