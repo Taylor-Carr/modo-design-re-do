@@ -87,14 +87,14 @@
   gap: 30px;
 }
 
-.price span {
+.hosting-price-span {
   font-weight: 600;
   display: block;
   font-size: 14px;
   color: #777;
 }
 
-.price strong {
+.hosting-price-strong {
   display: block;
   font-size: 20px;
   font-weight: 600;

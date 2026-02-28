@@ -88,14 +88,14 @@
   gap: 30px;
 }
 
-.design-price span {
+.design-price-text {
   font-weight: 600;
   display: block;
   font-size: 14px;
   color: #777;
 }
 
-.design-price strong {
+.design-price-value {
   display: block;
   font-size: 20px;
   font-weight: 600;
@@ -296,7 +296,7 @@
     to right,
     transparent 0,
     black 20px,
-    black calc(100% - 20px),
+    black calc(100% - 10px),
     transparent 100%
   );
 }
@@ -315,7 +315,7 @@
 
 .cs-media {
   height: clamp(130px, 16vw, 210px); 
-  border-radius: 6px;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.08);
   background: linear-gradient(
@@ -380,8 +380,8 @@
 }
 
 .cs-controlBtn {
-  width:32px;
-  height:32px;
+  width:38px;
+  height:38px;
   border-radius:999px;
   border:1px solid rgba(255,255,255,.08);
   background:rgba(255,255,255,.04);
