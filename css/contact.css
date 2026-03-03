@@ -81,9 +81,9 @@
 }
 
 .mail-icon {
-  height: 36px;
-  width: 38px;
-  margin-right: 5px;
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
 }
 
 .contact-email small {
@@ -95,6 +95,11 @@
 
 .copy-email {
   cursor: pointer;
+}
+
+.copy-email:hover {
+  opacity: 0.6;
+  text-decoration: underline;
 }
 
 .copy-email small {

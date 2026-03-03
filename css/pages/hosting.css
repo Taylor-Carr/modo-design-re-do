@@ -1,6 +1,6 @@
 .hosting-section {
   position: relative;
-  padding: 340px 20px 140px 20px;
+  padding: 340px 20px 60px 20px;
   overflow: hidden;
   font-family: 'Inter', sans-serif;
 }
@@ -162,6 +162,8 @@
 /* Hosting second section */
 
 .hosting-section-secondary {
+  margin-top: 20px;
+  margin-bottom: 80px;
   padding: 0px 20px;
   font-family: 'Inter', sans-serif;
 }
@@ -208,11 +210,12 @@
 
 .hosting-right p {
   color: #555;
-  margin-bottom: 20px;
+  margin-top: 10px;
   line-height: 1.6;
 }
 
 .hosting-btn-secondary {
+  margin-top: 20px;
   display: inline-block;
   padding: 12px 22px;
   border-radius: 30px;
@@ -229,42 +232,42 @@
 }
 
 .hosting-grid {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
 .hosting-card {
-  background: #fff;
-  padding: 40px 30px;
+  background: rgba(238, 245, 251, 0.05);
+  padding: 35px 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-  transition: transform 0.3s ease;
 }
 
-.hosting-card:hover {
-  transform: translateY(-6px);
-}
 
-.hosting-icon {
-  width: 44px;
-  height: 44px;
+.hosting-card-icon {
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: #f0f0f2;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 18px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .hosting-card h3 {
+  font-family: 'Inter';
+  color: #333;
   font-size: 18px;
   margin-bottom: 12px;
 }
 
 .hosting-card p {
+  font-family: 'Inter';
   color: #666;
   font-size: 14px;
   line-height: 1.6;

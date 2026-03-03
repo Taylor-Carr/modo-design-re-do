@@ -18,6 +18,10 @@
   align-items: start;
 }
 
+.column-heading {
+  font-weight: 500;
+}
+
 .footer-col {
   display: flex;
   flex-direction: column;
