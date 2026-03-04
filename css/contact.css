@@ -190,18 +190,185 @@
 }
 
 @media (max-width: 1024px) {
-  .faq-contact-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
+
+  .faq-contact-section {
+    padding: 40px 30px;
   }
+
+  .faq-contact-container {
+    gap: 50px; 
+  }
+
+  .contact-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .contact-card h3 {
+    font-size: 26px; 
+  }
+
+  .faq-heading h2 {
+    font-size: 36px;
+    margin-bottom: 35px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 820px) {
+
+  .faq-contact-container {
+    gap: 40px;
+  }
+
+  .contact-card h3 {
+    font-size: 24px;
+  }
+
+  .faq-heading h2 {
+    font-size: 32px;
+  }
+
+  .contact-btn {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+
 }
 
 @media (max-width: 768px) {
+
   .faq-heading h2 {
     font-size: 30px;
   }
 
-  .faq-contact-section {
-    padding: 80px 20px;
+  .faq-contact-container {
+    gap: 35px;
+    grid-template-columns: 350px 1fr;
   }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .faq-contact-section {
+    padding: 50px 20px;
+  }
+
+  /* STACK GRID */
+  .faq-contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .contact-card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .contact-card h3 {
+    font-size: 22px;
+  }
+
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-email {
+    gap: 10px;
+  }
+
+  .mail-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .faq-heading h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .faq-contact-section {
+    padding: 45px 18px;
+  }
+
+  .contact-card {
+    padding: 18px;
+  }
+
+  .contact-card h3 {
+    font-size: 20px;
+  }
+
+  .contact-text {
+    font-size: 13.5px;
+  }
+
+  .faq-heading h2 {
+    font-size: 23px;
+  }
+
+  .faq-question {
+    font-size: 13.5px;
+  }
+
+  .faq-answer p {
+    font-size: 13.5px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .faq-heading h2 {
+    font-size: 21px;
+  }
+
+  .contact-card h3 {
+    font-size: 18px;
+  }
+
+  .contact-text {
+    font-size: 13px;
+  }
+
+  .faq-question {
+    font-size: 13px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+  }
+
 }

@@ -17,8 +17,6 @@
   max-width: 610px;
   margin-bottom: 20px;
   margin-right: 70px;
-  
- 
 }
 
 .hero-title .line {
@@ -97,26 +95,7 @@
     opacity 0.4s ease;
 }
 
-/* Large desktop */
-@media (min-width: 1440px) {
-  .hero {
-    padding: 10px 20px 80px;
-  }
 
-  
-
-  .hero-image-wrapper {
-    height: 40vh;
-  }
-
-  .hero-image-text h2 {
-    font-size: 22px;
-  }
-
-  .hero-image-text p {
-    font-size: 16px;
-  }
-}
 
 
 /* Ultra-wide screens */
@@ -140,17 +119,140 @@
 }
 
 
+/* LARGE DESKTOP (1400px and down)*/
+@media (max-width: 1400px) {
+    .hero {
+    padding: 10px 20px 80px;
+  }
+
+  .hero-image-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-image-text p {
+    font-size: 16px;
+  }
+}
+
+
+/* DESKTOP (1200px and down) */
+@media (max-width: 1200px) {
+  /* Standard laptops */
+}
+
+
+/* SMALL DESKTOP / LARGE TABLET (1024px and down) */
+@media (max-width: 1024px) {
+  .hero-image-wrapper {
+  height: 40vh;
+}
+
+.hero-title {
+    font-size: 23px;
+    margin-right: 0px;
+  }
+
+  .hero {
+    padding: 20px 20px 20px;
+  }
+}
+
+
+/* Ipad Pro */
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 20px;
+    margin-right: 0px;
+    margin-left: 40px;
+  }
+
+  .hero {
+    padding: 20px 20px 20px;
+  }
+    .hero-image-wrapper {
+    height: 40vh;
+  }
+
+   .hero-top {
+    grid-template-columns: 1fr;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* Ipad Mini */
 @media (max-width: 768px) {
   .hero {
-    padding: 20px 20px 60px;
+    padding: 20px 20px 20px;
   }
 
   .hero-top {
     grid-template-columns: 1fr;
+    margin-top: 0px;
   }
 
   .hero-title {
-    font-size: 30px;
+    font-size: 22px;
+    margin-right: 0px;
+    margin-left: 25px;
   }
 
+  .hero-image-wrapper {
+  height: 40vh;
+}
+ .hero-top {
+    grid-template-columns: 1fr;
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
+}
+
+
+/* LARGE MOBILE (600px and down) */
+@media (max-width: 600px) {
+  /* Large phones */
+}
+
+
+/* MOBILE (480px and down) */
+@media (max-width: 480px) {
+  .hero-image-wrapper {
+  height: 70vh;
+}
+
+.hero-top {
+    grid-template-columns: 1fr;
+    margin-top: 70px;
+    margin-bottom: 10px;
+  }
+
+.hero-title {
+    font-size: 21px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+
+/* SMALL MOBILE (375px and down) */
+@media (max-width: 375px) {
+   .hero {
+    padding: 20px 20px 40px;
+  }
+
+  .hero-top {
+    grid-template-columns: 1fr;
+    margin-top: 70px;
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 21px;
+    margin-right: 0px;
+  }
+  
+.hero-image-wrapper {
+  height: 70vh;
+}
+}

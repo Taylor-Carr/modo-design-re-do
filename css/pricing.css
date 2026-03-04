@@ -47,7 +47,7 @@
   font-size: 48px;
   font-weight: 600;
   line-height: 1.15;
-  margin-bottom: 140px;
+  margin-bottom: 100px;
   max-width: 100%;
     background: linear-gradient(
     135deg,
@@ -310,43 +310,226 @@
 
 @media (max-width: 1024px) {
 
+  .pricing-section {
+    padding: 80px 30px 30px;
+  }
+
   .pricing-container {
-    grid-template-columns: 1fr;
-    gap: 70px;
+    gap: 30px;
+    margin-top: 140px;
   }
 
   .pricing-bg-text {
-    font-size: 140px;
-    top: 20px;
+    font-size: 305px; 
+    top: -30px;
   }
 
   .pricing-title {
-    font-size: 38px;
+    font-size: 40px; 
+    margin-bottom: 40px;
   }
+
+  .pricing-card {
+    padding: 26px;
+    border-radius: 24px;
+  }
+
+  .pricing-card h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .pricing-card ul {
+    column-gap: 30px;
+    row-gap: 14px;
+  }
+
+  .b-card-price-value,
+  .g-card-price-value {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 820px) {
+
+  .pricing-container {
+    gap: 30px;
+    margin-top: 100px;
+  }
+
+  .pricing-title {
+    font-size: 36px;
+  }
+
+  .pricing-bg-text {
+    font-size: 240px;
+  }
+
+  .pricing-container {
+    gap: 25px;
+  }
+
+  .pricing-card {
+    padding: 24px;
+  }
+
+  .pricing-card ul li {
+    font-size: 13px;
+  }
+
+  .pricing-btn {
+    padding: 11px 22px;
+    font-size: 13px;
+  }
+
 }
 
 @media (max-width: 768px) {
 
-  .pricing-card ul {
-    grid-template-columns: 1fr;
+   .pricing-container {
+    gap: 30px;
+    margin-top: 85px;
+  }
+
+  .pricing-title {
+    font-size: 36px;
+  }
+
+  .pricing-bg-text {
+    font-size: 225px;
+  }
+
+  .pricing-card h3 {
+    font-size: 18px;
+  }
+
+  .b-card-price-value,
+  .g-card-price-value {
+    font-size: 17px;
+  }
 
 }
 
+@media (max-width: 600px) {
+
   .pricing-section {
-    padding: 90px 20px;
+    padding: 70px 20px 20px;
+  }
+
+  /* STACK MAIN GRID */
+  .pricing-container {
+    grid-template-columns: 1fr;
+    margin-top: 70px;
+    gap: 50px;
+  }
+
+  /* Control giant background text */
+  .pricing-bg-text {
+    font-size: 160px;
+    top: -10px;
   }
 
   .pricing-title {
     font-size: 30px;
+    margin-bottom: 30px;
   }
 
+  .testimonial-body {
+    max-width: 100%;
+  }
+
+  /* Card adjustments */
+  .pricing-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .pricing-card h3 {
+    font-size: 17px;
+    margin-bottom: 25px;
+  }
+
+  /* STACK FEATURES */
+  .pricing-card ul {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  .pricing-card ul li {
+    font-size: 13px;
+  }
+
+  /* Stack price row */
   .price-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
+  }
+
+  .pricing-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .pricing-section {
+    padding: 60px 18px 18px;
+  }
+
+  .pricing-bg-text {
+    font-size: 120px;
+  }
+
+  .pricing-title {
+    font-size: 26px;
+  }
+
+  .testimonial-title {
+    font-size: 20px;
+  }
+
+  .testimonial-body {
+    font-size: 14px;
   }
 
   .pricing-card {
-    padding: 35px;
+    padding: 20px;
   }
+
+  .b-card-price-value,
+  .g-card-price-value {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .pricing-bg-text {
+    font-size: 95px;
+  }
+
+  .pricing-title {
+    font-size: 23px;
+  }
+
+  .pricing-card h3 {
+    font-size: 16px;
+  }
+
+  .pricing-card ul li {
+    font-size: 12.5px;
+  }
+
+  .pricing-btn {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
 }
