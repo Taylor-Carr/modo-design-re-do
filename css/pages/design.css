@@ -150,38 +150,7 @@
 }
 
 
-@media (max-width: 1024px) {
 
-  .about-heading h2 {
-    font-size: 48px;
-  }
-
-  .about-content {
-    gap: 50px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .design-heading h2 {
-    font-size: 34px;
-  }
-
-  .design-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .design-section {
-    padding: 80px 20px;
-  }
-
-  .design-pricing {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-}
 
 /* Project- header section carousel */
 
@@ -408,11 +377,164 @@
   transform:none;
 }
 
+@media (max-width: 1024px) {
+
+  .design-section {
+    padding: 320px 30px 30px;
+  }
+
+  .design-bg-text {
+    font-size: 305px; 
+    margin-top: 110px;
+  }
+
+  .design-heading h2 {
+    font-size: 46px; 
+    max-width: 750px;
+  }
+
+  .design-content {
+    gap: 60px; 
+  }
+
+  .design-intro,
+  .design-body {
+    max-width: 450px;
+  }
+
+  .design-benefits-btn {
+  display: none;
+}
+
+
+  .design-price-value {
+    font-size: 18px;
+  }
+
+  .design-list li {
+    font-size: 14px;
+  }
+
+
+  .design-benefits-header {
+    gap: 50px;
+  }
+
+  .design-benefits-heading {
+    font-size: 46px;
+    max-width: 750px;
+  }
+
+}
+
+@media (max-width: 820px) {
+
+  .design-section {
+    padding: 290px 30px 30px;
+  }
+
+  .design-bg-text {
+    font-size: 240px; 
+    margin-top: 140px;
+  }
+
+  .design-heading h2 {
+    font-size: 46px; 
+    max-width: 750px;
+  }
+
+  .design-heading {
+  margin-bottom: 20px;
+}
+
+  .design-content {
+    gap: 50px;
+  }
+
+  .design-intro {
+  max-width: 500px;
+   margin-top: 70px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+  .design-pricing {
+    gap: 20px;
+  }
+
+  .design-btn {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+
+  .design-benefits-header {
+  margin: 0 auto;
+  max-width: 1250px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+  .design-benefits-heading {
+    font-size: 42px;
+  }
+
+  .pricing-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  row-gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+}
 
 @media (max-width: 900px) {
   .cs-heading { 
     font-size: 46px; 
   }
+}
+
+@media (max-width: 768px) {
+
+  .design-section {
+    padding: 260px 20px 20px;
+  }
+
+  .design-bg-text {
+    font-size: 230px;
+    margin-top: 120px;
+  }
+
+  .design-heading h2 {
+    font-size: 25px;
+    max-width: 500px;
+  }
+
+  .design-benefits-header {
+    margin-top: 20px;
+  }
+
+  .design-content {
+    gap: 40px;
+  }
+
+  .design-intro,
+  .design-body {
+    font-size: 15px;
+  }
+
+  .design-benefits-heading {
+    font-size: 32px;
+  }
+
+  .design-benefits-p {
+    font-size: 15px;
+  }
+
 }
 
 
@@ -478,4 +600,125 @@
   font-size: 14px;
   
 }
+}
+
+@media (max-width: 600px) {
+
+  .design-section {
+    padding: 180px 20px 20px;
+  }
+
+  /* Control giant background word */
+  .design-bg-text {
+    font-size: 150px;
+    margin-top: 80px;
+  }
+
+  .design-heading {
+    margin-bottom: 30px;
+  }
+
+  .design-heading h2 {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    max-width: 100%;
+  }
+
+  /* STACK MAIN GRID */
+  .design-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .design-intro,
+  .design-body {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  /* STACK PRICING ROW */
+  .design-pricing {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .design-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* STACK BENEFITS HEADER */
+  .design-benefits-header {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .design-benefits-heading {
+    font-size: 26px;
+  }
+
+  .design-benefits-p {
+    font-size: 14px;
+  }
+
+  /* LIST CLEANUP */
+  .design-list li {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .design-section {
+    padding: 160px 18px 20px;
+  }
+
+  .design-bg-text {
+    font-size: 110px;
+  }
+
+  .design-heading h2 {
+    font-size: 23px;
+  }
+
+  .design-intro,
+  .design-body {
+    font-size: 14px;
+  }
+
+  .design-price-value {
+    font-size: 18px;
+  }
+
+  .design-benefits-heading {
+    font-size: 23px;
+  }
+
+  .design-benefits-p {
+    font-size: 13.5px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .design-bg-text {
+    font-size: 90px;
+  }
+
+  .design-heading h2 {
+    font-size: 21px;
+  }
+
+  .design-benefits-heading {
+    font-size: 21px;
+  }
+
+  .design-list li {
+    font-size: 13px;
+  }
+
 }

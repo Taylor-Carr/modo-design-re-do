@@ -148,16 +148,6 @@
   color: #777;
 }
 
-@media (max-width: 1024px) {
-
-  .hosting-heading h2 {
-    font-size: 48px;
-  }
-
-  .hosting-content {
-    gap: 50px;
-  }
-}
 
 /* Hosting second section */
 
@@ -274,41 +264,260 @@
 }
 
 @media (max-width: 1024px) {
-  .hosting-header {
-    grid-template-columns: 1fr;
+
+  .hosting-section {
+    padding: 290px 30px 50px;
   }
+
+  .hosting-bg-text {
+    font-size: 270px; 
+    margin-top: 120px;
+  }
+
+  .hosting-heading h2 {
+    font-size: 46px;
+    max-width: 750px;
+  }
+
+  .hosting-content {
+    gap: 60px;
+  }
+
+  .hosting-intro,
+  .hosting-body {
+    max-width: 450px;
+  }
+
+  .hosting-price-strong {
+    font-size: 18px;
+  }
+
+  .hosting-header {
+    gap: 50px;
+  }
+
+  .hosting-heading-secondary {
+    font-size: 46px;
+    max-width: 750px;
+  }
+
+  .hosting-grid {
+    gap: 24px;
+  }
+
+  .hosting-card {
+    padding: 30px 25px;
+  }
+
+}
+
+@media (max-width: 820px) {
+
+  .hosting-section {
+    padding: 260px 25px 45px;
+  }
+
+  .hosting-bg-text {
+    font-size: 220px;
+  }
+
+  .hosting-heading h2 {
+    font-size: 42px;
+    max-width: 600px;
+  }
+
+  .hosting-content {
+    gap: 50px;
+  }
+
+  .hosting-btn {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+
+  .hosting-heading-secondary {
+    font-size: 36px;
+  }
+
+
 }
 
 @media (max-width: 768px) {
 
-  .hosting-grid {
-    grid-template-columns: 1fr;
+  .hosting-section {
+    padding: 250px 20px 40px;
   }
 
-  .hosting-left h2 {
-    font-size: 30px;
-  }
-
-  .hosting-section-secondary {
-    padding: 60px 20px;
+  .hosting-bg-text {
+    font-size: 210px;
   }
 
   .hosting-heading h2 {
-    font-size: 34px;
+    font-size: 38px;
   }
 
   .hosting-content {
+    gap: 40px;
+  }
+
+  .hosting-intro,
+  .hosting-body {
+    font-size: 15px;
+  }
+
+  .hosting-heading-secondary {
+    font-size: 34px;
+  }
+
+  .hosting-card h3 {
+    font-size: 17px;
+  }
+
+  .hosting-card p {
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hosting-section {
+    padding: 180px 20px 40px;
+  }
+
+  /* Control giant background word */
+  .hosting-bg-text {
+    font-size: 140px;
+    margin-top: 80px;
+  }
+
+  .hosting-heading {
+    margin-bottom: 30px;
+  }
+
+  .hosting-heading h2 {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    max-width: 100%;
+  }
+
+  /* STACK MAIN GRID */
+  .hosting-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .hosting-intro,
+  .hosting-body {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  /* STACK PRICING */
+  .hosting-pricing {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .hosting-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hosting-list li {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+
+  /* SECOND SECTION STACK */
+  .hosting-header {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .hosting-section {
-    padding: 80px 20px;
+  .hosting-heading-secondary {
+    font-size: 26px;
   }
 
-  .hosting-pricing {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  .hosting-right p {
+    font-size: 14px;
   }
+
+  .hosting-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* GRID → 1 COLUMN */
+  .hosting-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .hosting-card {
+    padding: 25px 22px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .hosting-section {
+    padding: 160px 18px 35px;
+  }
+
+  .hosting-bg-text {
+    font-size: 110px;
+  }
+
+  .hosting-heading h2 {
+    font-size: 23px;
+  }
+
+  .hosting-intro,
+  .hosting-body {
+    font-size: 14px;
+  }
+
+  .hosting-price-strong {
+    font-size: 18px;
+  }
+
+  .hosting-heading-secondary {
+    font-size: 23px;
+  }
+
+  .hosting-card h3 {
+    font-size: 16px;
+  }
+
+  .hosting-card p {
+    font-size: 13.5px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .hosting-bg-text {
+    font-size: 90px;
+  }
+
+  .hosting-heading h2 {
+    font-size: 21px;
+  }
+
+  .hosting-heading-secondary {
+    font-size: 21px;
+  }
+
+  .hosting-list li {
+    font-size: 13px;
+  }
+
+  .hosting-card {
+    padding: 22px 18px;
+  }
+
 }
