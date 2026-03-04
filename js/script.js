@@ -1,5 +1,4 @@
 // HERO MAIN H1 STAGGER ANIMATION
-
 window.addEventListener("load", () => {
   const lines = document.querySelectorAll(".hero-title .line span");
 
@@ -13,7 +12,6 @@ window.addEventListener("load", () => {
 
 
 // HERO CARD ROTATING TEXT
-
 const phrases = [
   "Built for growth",
   "Designed to convert",
@@ -43,34 +41,34 @@ if (changingText) {
   }, 2800);
 }
 
-
-// NAV SCROLL STATE
-
+// NAVIGATION
 const navbar = document.getElementById("navbar");
+const menuToggle = document.getElementById("menuToggle");
+const navDropdown = document.getElementById("navDropdown");
 
+const menuOpen = document.querySelector(".menu-open");
+const menuClose = document.querySelector(".menu-close");
+
+
+// SCROLL STATE
 window.addEventListener("scroll", () => {
+
   if (window.scrollY > 0) {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
   }
 
-  // Close menu if user scrolls
-  if (navDropdown.classList.contains("active")) {
+  if (
+    navDropdown.classList.contains("active") &&
+    window.scrollY > 100
+  ) {
     closeMenu();
   }
 });
 
 
-// MENU TOGGLE LOGIC
-
-const menuToggle = document.getElementById("menuToggle");
-const navDropdown = document.getElementById("navDropdown");
-
-const menuOpen = document.querySelector(".menu-open");
-const menuClose = document.querySelector(".menu-close");
-const menuIcon = document.querySelector(".menu-icon");
-
+// TOGGLE MENU
 menuToggle.addEventListener("click", (e) => {
   e.stopPropagation();
 
@@ -82,7 +80,6 @@ menuToggle.addEventListener("click", (e) => {
     openMenu();
   }
 
-  // Toggle rotation on the button
   menuToggle.classList.toggle("active");
 });
 
@@ -100,20 +97,19 @@ function closeMenu() {
   if (menuOpen) menuOpen.classList.add("active");
 }
 
-
-//CLOSE WHEN CLICKING OUTSIDE
-
 document.addEventListener("click", (e) => {
-  if (
-    navDropdown.classList.contains("active") &&
-    !navDropdown.contains(e.target) &&
-    !menuToggle.contains(e.target)
-  ) {
-    closeMenu();
-  }
+
+  if (!navDropdown.classList.contains("active")) return;
+
+  if (e.target.closest("#menuToggle")) return;
+
+  if (e.target.closest("[data-ignore-menu]")) return;
+
+  if (e.target.closest("#navDropdown")) return;
+
+  closeMenu();
 });
 
-// AUTO ACTIVE LINK BASED ON URL
 
 const links = document.querySelectorAll(".dropdown-links a");
 const currentPage = window.location.pathname.split("/").pop();
@@ -129,6 +125,108 @@ links.forEach(link => {
   }
 });
 
+
+// ACCORDIONS
+document.addEventListener("DOMContentLoaded", function () {
+
+  function initAccordion(itemSelector, headerSelector, contentSelector) {
+
+    const items = document.querySelectorAll(itemSelector);
+    let activeItem = null;
+
+    function openItem(item) {
+      const content = item.querySelector(contentSelector);
+
+      item.classList.add("active");
+      content.style.height = content.scrollHeight + "px";
+
+      content.addEventListener("transitionend", function handler() {
+        content.style.height = "auto";
+        content.removeEventListener("transitionend", handler);
+      });
+
+      activeItem = item;
+    }
+
+    function closeItem(item) {
+      const content = item.querySelector(contentSelector);
+
+      content.style.height = content.scrollHeight + "px";
+
+      requestAnimationFrame(() => {
+        content.style.height = "0px";
+      });
+
+      item.classList.remove("active");
+
+      if (activeItem === item) {
+        activeItem = null;
+      }
+    }
+
+    items.forEach(item => {
+      const header = item.querySelector(headerSelector);
+
+      header.addEventListener("click", function () {
+
+        if (item === activeItem) {
+          closeItem(item);
+          return;
+        }
+
+        if (activeItem) {
+          closeItem(activeItem);
+        }
+
+        openItem(item);
+      });
+    });
+  }
+
+  initAccordion(".accordion-item", ".accordion-header", ".accordion-content");
+  initAccordion(".faq-item", ".faq-question", ".faq-answer");
+});
+
+
+// COPY EMAIL
+function copyEmail(el) {
+
+  const email = el.textContent.trim();
+  navigator.clipboard.writeText(email);
+
+  const note = document.createElement("span");
+  note.textContent = "Copied";
+
+  note.style.position = "absolute";
+  note.style.left = "50%";
+  note.style.top = "-28px";
+  note.style.transform = "translateX(-50%)";
+  note.style.background = "#000";
+  note.style.color = "#fff";
+  note.style.padding = "4px 10px";
+  note.style.fontSize = "12px";
+  note.style.borderRadius = "6px";
+  note.style.whiteSpace = "nowrap";
+  note.style.opacity = "0";
+  note.style.transition = "opacity 0.2s ease";
+
+  el.style.position = "relative";
+  el.appendChild(note);
+
+  requestAnimationFrame(() => {
+    note.style.opacity = "1";
+  });
+
+  setTimeout(() => {
+    note.style.opacity = "0";
+
+    setTimeout(() => {
+      note.remove();
+    }, 200);
+
+  }, 1500);
+}
+
 // toggle for pricing section
   const buttons = document.querySelectorAll(".toggle");
   const cards = document.querySelectorAll(".pricing-card");
@@ -136,21 +234,17 @@ links.forEach(link => {
   buttons.forEach(button => {
     button.addEventListener("click", () => {
 
-      // remove active state
       buttons.forEach(btn => btn.classList.remove("active"));
       cards.forEach(card => card.classList.remove("active"));
 
-      // activate clicked button
       button.classList.add("active");
 
-      // show matching card
       const plan = button.dataset.plan;
       document.getElementById(plan).classList.add("active");
 
     });
   });
 
-  //caorusel for design page 
   (function () {
   const csTrack = document.getElementById("csTrack");
   const csPrevBtn = document.getElementById("csPrevBtn");
@@ -181,7 +275,6 @@ links.forEach(link => {
   csTrack.addEventListener("scroll", csUpdateButtons, { passive: true });
   window.addEventListener("resize", csUpdateButtons);
 
-  // drag-to-scroll
   let csIsDown = false;
   let csStartX = 0;
   let csStartScrollLeft = 0;
@@ -206,7 +299,6 @@ links.forEach(link => {
     csIsDown = false;
     csTrack.style.scrollBehavior = "smooth";
 
-    // settle snap in some browsers
     csTrack.scrollBy({ left: 0, behavior: "smooth" });
     csUpdateButtons();
   }
@@ -215,6 +307,5 @@ links.forEach(link => {
   csTrack.addEventListener("pointercancel", csEndDrag);
   csTrack.addEventListener("pointerleave", csEndDrag);
 
-  // initial state
   csUpdateButtons();
 })();

@@ -51,34 +51,47 @@
   <div class="logo">
     <span class="logo-text">MODO STUDIO</span>
   </div>
-
   <div class="nav-right">
-    <button class="pill-btn talk-btn">LET'S CHAT</button>
-
+    <button class="pill-btn talk-btn">LET'S CHAT<img src="/images/assets/arrow-white-icon.png" alt="Arrow icon" class="price-btn-arrow"></button>
     <button class="pill-btn menu-btn" id="menuToggle">
       <span class="menu-label">
         <span class="menu-word menu-open active">MENU</span>
         <span class="menu-word menu-close">CLOSE</span>
       </span>
-      <img src="/images/new new menu icon v.png" alt="" class="menu-icon">
-
-      <div class="nav-dropdown" id="navDropdown">
-        <div class="dropdown-inner">
-          <div class="dropdown-links">
-            <a href="index.html">HOME</a>
-            <a href="design.html">DESIGN</a>
-            <a href="hosting.html">HOSTING</a>
-          </div>
-
-          <div class="dropdown-labs">
-            <a href="#">CONTACT</a>
+      <img src="/images/new new menu icon v.png"
+           alt=""
+           class="menu-icon">
+    </button>
+    <div class="nav-dropdown" id="navDropdown">
+      <div class="dropdown-inner">
+        <div class="dropdown-links">
+          <a href="index.html">HOME</a>
+          <a href="design.html">DESIGN</a>
+          <a href="hosting.html">HOSTING</a>
+        </div>
+        <div class="dropdown-labs">
+          <a href="#" class="dropdown-title">CONTACT</a>
+          <div class="dropdown-email">
+            <div class="contact-email">
+              <img src="/images/assets/mail-icon.png"
+                   alt="mail icon"
+                   class="mail-icon-dropdown">
+              <div class="email-text">
+                <small>Get In Touch</small>
+                <p class="copy-email-dropdown"
+                   onclick="copyEmail(this); event.stopPropagation();"
+                   data-ignore-menu>
+                  taylor@modostudio.co.uk
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-    </button>
+    </div>
   </div>
 </nav>
+
 
 <div class="nav-dropdown" id="navDropdown">
   <div class="dropdown-inner">
@@ -96,99 +109,109 @@
 
 <section class="design-section">
   <div class="design-bg-text">Design</div>
-    <div class="design-container">
+  <div class="design-container">
     <div class="design-heading">
       <h2>
-        Professional web designers based in Bristol.
+        Website design for Bristol businesses who want something built properly.
         <span class="design-muted">
-          Choose a one-off build or an all inclusive monthly plan.
+          Custom-built. Clear process. No unnecessary back and forth.
         </span>
       </h2>
     </div>
+
     <div class="design-content">
       <!-- LEFT SIDE -->
       <div class="about-left">
         <p class="design-intro">
-          We create high-quality websites for Bristol small businesses and trades 
-          who want something professional, reliable and built properly.
+          Every website we build is designed around your business — your services, your customers and what makes you different. We don’t use templates or resell the same layout with a new logo.
         </p>
+
         <p class="design-body">
-          From strategy and design to development and launch, everything is handled in-house. 
-          You can pay a one-off project fee and manage hosting separately, or choose a 
-          simple monthly plan that includes hosting, maintenance and ongoing support. 
-          No jargon. No hidden costs. Just a website that works.
+          If you want to go in-depth, we’ll take time to understand your positioning and shape the structure and messaging properly.  
+          
         </p>
+
         <div class="design-pricing">
           <div class="design-price">
-            <span>Websites from</span>
-            <strong>£25 per month</strong>
+            <span class="design-price-text">Websites from</span>
+            <strong class="design-price-value">£25 per month</strong>
           </div>
-          <a href="#pricing" class="design-btn">View Pricing →</a>
+          <a href="#pricing" class="design-btn">View Pricing<img src="/images/assets/arrow-white-icon.png" alt="Arrow icon" class="price-btn-arrow"></a>
         </div>
       </div>
+
       <!-- RIGHT SIDE -->
-    <div class="pricing-right">
-      <div class="pricing-toggle">
-        <button class="toggle active" data-plan="monthly">
-          Monthly $8,000/mo
-        </button>
-        <button class="toggle" data-plan="custom">
-          Custom Starts at $20,000
-        </button>
-      </div>
-
-      <!-- MONTHLY CARD -->
-      <div class="pricing-card active" id="monthly">
-        <h3>Monthly Design Retainer</h3>
-        <ul>
-          <li>Ongoing design support for any project</li>
-          <li>Custom development or no-code (limits apply)</li>
-          <li>Clear timeline and milestone deliverables</li>
-          <li>Expert project manager & weekly async updates</li>
-        </ul>
-        <div class="price-row">
-          <div class="price">
-            <strong>$8,000</strong>
-            <span>per month<br>billed monthly</span>
-          </div>
-          <a href="#" class="pricing-btn">Get Started →</a>
+      <div class="pricing-right">
+        <div class="pricing-toggle">
+          <button class="toggle active" data-plan="monthly">
+            Pay Monthly
+          </button>
+          <button class="toggle" data-plan="custom">
+            Custom Projects
+          </button>
         </div>
-      </div>
 
-      <!-- CUSTOM CARD -->
-      <div class="pricing-card" id="custom">
-            <ul>
-            <li>Full website or product build</li>
-            <li>UX strategy & conversion optimisation</li>
-            <li>Custom integrations</li>
-            <li>Performance & SEO optimisation</li>
-            </ul>
-            <div class="price-row">
-            <div class="price">
-                <strong>From $20,000</strong>
-                <span>fixed project pricing</span>
+        <div class="pricing-card active" id="monthly">
+          <h3>Pay Monthly Websites</h3>
+          <ul>
+            <li>Discovery call to understand your business</li>
+            <li>Fully custom design — no templates</li>
+            <li>Mobile responsive and SEO-ready build</li>
+            <li>Hosting, security and updates included</li>
+          </ul>
+          <div class="price-row">
+            <div class="b-card-price">
+              <strong class="b-card-price-value">£15 - £25</strong>
+              <span class="b-card-price-text">/mo</span>
             </div>
-            <a href="#" class="pricing-btn">Book a Strategy Call →</a>
+            <a href="#contact" class="pricing-btn">
+              Get Started
+              <img src="/images/assets/arrow-icon.png" alt="Arrow icon" class="pricing-card-arrow">
+            </a>
+          </div>
+        </div>
+
+        <div class="pricing-card" id="custom">
+          <h3>Custom Websites</h3>
+          <ul>
+            <li>In-depth planning and structure mapping</li>
+            <li>Messaging shaped around your positioning</li>
+            <li>Bespoke design and development</li>
+            <li>Multi-page or larger builds</li>
+          </ul>
+          <div class="price-row">
+            <div class="g-card-price">
+              <strong class="g-card-price-value">From £500</strong>
+              <span class="g-card-price-text"></span>
             </div>
+            <a href="#contact" class="pricing-btn">
+              Book a Free Call
+              <img src="/images/assets/arrow-icon.png" alt="Arrow icon" class="pricing-card-arrow">
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-
 <section class="projects-section">
   <div class="design-benefits-header">
-      <div class="design-benefits-left">
-        <h2 class="design-benefits-heading">Professional websites<br>without the usual hassle<br>without the usual hassle</h2>
-      </div>
-      <div class="design-benefits-right">
-        <p>
-          Whether you choose a one-off build or a monthly plan with hosting and management included, 
-          we make the entire process simple, clear and stress-free.
-        </p>
-        <a href="#pricing" class="design-benefits-btn">View Pricing</a>
-      </div>
+    <div class="design-benefits-left">
+      <h2 class="design-benefits-heading">
+        What working together looks like
+      </h2>
+      <p class="design-benefits-p">
+        We start with a focused conversation about your business and goals.  
+        We then plan the structure, design around your brand and build the site in-house.  
+        You review everything before launch — nothing goes live without your approval.
+      </p>
+      <a href="#pricing" class="design-benefits-btn">View Pricing</a>
     </div>
+
+    <div class="design-benefits-right"></div>
+  </div>
+
   <div class="cs-wrap">
     <div class="cs-shell" id="csShell">
       <div class="cs-bleed">
@@ -200,7 +223,6 @@
                 alt="Trades website design example for a Bristol plumbing company"
                 src="/images/samples/surf.png">
             </div>
-           
           </article>
 
           <article class="cs-card">
@@ -209,7 +231,6 @@
                 alt="Small business website design example for a Bristol-based service company"
                 src="/images/samples/hiking.png">
             </div>
-           
           </article>
 
           <article class="cs-card">
@@ -218,7 +239,6 @@
                 alt="Modern responsive website design for a UK small business"
                 src="/images/samples/construction.png">
             </div>
-           
           </article>
 
           <article class="cs-card">
@@ -227,7 +247,6 @@
                 alt="Professional service website design example"
                 src="images/samples/surf.png">
             </div>
-           
           </article>
 
           <article class="cs-card">
@@ -236,7 +255,6 @@
                 alt="Affordable web design example for a small UK business"
                 src="images/samples/surf.png">
             </div>
-           
           </article>
 
         </div>
@@ -255,7 +273,6 @@
           </svg>
         </button>
       </div>
-
     </div>
   </div>
 </section>
@@ -263,30 +280,30 @@
 <section class="faq-contact-section">
   <div class="faq-contact-container">
 
-    <!-- LEFT CONTACT CARD -->
     <div class="contact-card">
-      <img src="https://i.pravatar.cc/80" alt="Profile" class="contact-avatar">
+      <img src="/images/profile-picture.png" alt="Taylor - Bristol web designer" class="contact-avatar">
 
-      <h3>Start your project</h3>
+      <h3>Let’s talk about your <br>website</h3>
       <p class="contact-text">
-        Let’s discuss your website, your goals, and whether a one-off build 
-        or monthly plan is the right fit for your business.
+        If you're considering a new website, send an email outlining your business and what you're aiming to achieve.
       </p>
 
       <a href="mailto:taylor@modostudio.co.uk?subject=Project%20Enquiry" class="contact-btn">
-        Start a Conversation →
+        Start the Conversation
+        <img src="/images/assets/arrow-white-icon.png" alt="Arrow icon" class="price-btn-arrow">
       </a>
 
       <div class="contact-email">
-        <span class="mail-icon">✉</span>
+        <span><img src="/images/assets/mail-icon.png" alt="mail icon" class="mail-icon"></span>
         <div>
-          <small>Prefer email?</small>
-          <p>taylor@modostudio.co.uk</p>
+          <small>You can email me directly at any time</small>
+          <p class="copy-email" onclick="copyEmail(this)">
+            taylor@modostudio.co.uk
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT FAQ -->
     <div class="faq-wrapper">
       <div class="faq-heading">
         <h2>Frequently<br><span>asked questions</span></h2>
@@ -297,39 +314,51 @@
         <div class="faq-item">
           <button class="faq-question">
             Do I have to choose the monthly plan?
-            <span class="faq-icon">+</span>
+            <img src="/images/assets/cross-icon.png" alt="" class="faq-icon">
           </button>
           <div class="faq-answer">
             <p>
-              No. You can choose a one-off website build and arrange hosting 
-              separately, or select our monthly plan which includes hosting, 
-              management and ongoing support.
+              No. You can choose a one-off build and arrange hosting separately, 
+              or select the monthly plan which includes hosting, management and ongoing support.
             </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            What’s included in the monthly plan?
-            <span class="faq-icon">+</span>
+            Do I have to choose the monthly plan?
+            <img src="/images/assets/cross-icon.png" alt="" class="faq-icon">
           </button>
           <div class="faq-answer">
             <p>
-              Hosting, domain management, security, backups, updates and ongoing 
-              support are all included — with no long-term contracts.
+              No. You can choose a one-off build and arrange hosting separately, 
+              or select the monthly plan which includes hosting, management and ongoing support.
             </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
-            How long does it take to build my website?
-            <span class="faq-icon">+</span>
+            Do I have to choose the monthly plan?
+            <img src="/images/assets/cross-icon.png" alt="" class="faq-icon">
           </button>
           <div class="faq-answer">
             <p>
-              Most projects are completed within a few weeks, depending on the 
-              size and how quickly content is approved.
+              No. You can choose a one-off build and arrange hosting separately, 
+              or select the monthly plan which includes hosting, management and ongoing support.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How involved do I need to be?
+            <img src="/images/assets/cross-icon.png" alt="" class="faq-icon">
+          </button>
+          <div class="faq-answer">
+            <p>
+              As involved as you’d like. Some clients prefer detailed planning conversations. 
+              Others want a simple, efficient process to get online quickly. We adapt to you.
             </p>
           </div>
         </div>
@@ -337,12 +366,12 @@
         <div class="faq-item">
           <button class="faq-question">
             Can I request changes after launch?
-            <span class="faq-icon">+</span>
+            <img src="/images/assets/cross-icon.png" alt="" class="faq-icon">
           </button>
           <div class="faq-answer">
             <p>
               Yes. If you’re on a monthly plan, updates are included. 
-              For one-off builds, we can provide ongoing support whenever you need it.
+              For one-off builds, ongoing support is available whenever needed.
             </p>
           </div>
         </div>
@@ -359,10 +388,10 @@
     <div class="footer-top">
 
       <div class="footer-col">
-        <a>Overview</a>
+        <a class="column-heading">Overview</a>
+        <a href="#">Home</a>
         <a href="#">Design</a>
         <a href="#">Hosting</a>
-        <a href="#">Contact</a>
       </div>
 
       <div class="footer-col">
