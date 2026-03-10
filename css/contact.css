@@ -267,7 +267,6 @@
     padding: 50px 20px;
   }
 
-  /* STACK GRID */
   .faq-contact-container {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -285,11 +284,6 @@
 
   .contact-text {
     font-size: 14px;
-  }
-
-  .contact-btn {
-    width: 100%;
-    text-align: center;
   }
 
   .contact-email {

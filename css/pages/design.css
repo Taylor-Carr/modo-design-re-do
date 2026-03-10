@@ -560,7 +560,6 @@
   .cs-shell{
   position:relative;
   padding:6px 0 30px;
-  background:#060708;
   overflow-x: clip;
 }
 
@@ -608,7 +607,6 @@
     padding: 180px 20px 20px;
   }
 
-  /* Control giant background word */
   .design-bg-text {
     font-size: 150px;
     margin-top: 80px;
@@ -624,7 +622,6 @@
     max-width: 100%;
   }
 
-  /* STACK MAIN GRID */
   .design-content {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -636,19 +633,6 @@
     font-size: 15px;
   }
 
-  /* STACK PRICING ROW */
-  .design-pricing {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .design-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* STACK BENEFITS HEADER */
   .design-benefits-header {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -662,7 +646,6 @@
     font-size: 14px;
   }
 
-  /* LIST CLEANUP */
   .design-list li {
     font-size: 14px;
     padding: 14px 0;
@@ -673,15 +656,22 @@
 @media (max-width: 480px) {
 
   .design-section {
-    padding: 160px 18px 20px;
+    padding: 195px 18px 20px;
   }
 
   .design-bg-text {
-    font-size: 110px;
+    font-size: 120px;
+    margin-top: 140px;
   }
 
   .design-heading h2 {
     font-size: 23px;
+  }
+
+  .design-intro {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
 
   .design-intro,

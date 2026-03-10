@@ -412,19 +412,23 @@
 }
 
 @media (max-width: 600px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    gap: 50px;
+  }
+
 
   .pricing-section {
     padding: 70px 20px 20px;
   }
 
-  /* STACK MAIN GRID */
   .pricing-container {
     grid-template-columns: 1fr;
     margin-top: 70px;
     gap: 50px;
   }
 
-  /* Control giant background text */
   .pricing-bg-text {
     font-size: 160px;
     top: -10px;
@@ -439,7 +443,6 @@
     max-width: 100%;
   }
 
-  /* Card adjustments */
   .pricing-card {
     padding: 22px;
     border-radius: 22px;
@@ -450,7 +453,6 @@
     margin-bottom: 25px;
   }
 
-  /* STACK FEATURES */
   .pricing-card ul {
     grid-template-columns: 1fr;
     row-gap: 12px;
@@ -461,18 +463,6 @@
     font-size: 13px;
   }
 
-  /* Stack price row */
-  .price-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .pricing-btn {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
 
 }
 
@@ -482,10 +472,15 @@
     padding: 60px 18px 18px;
   }
 
-  .pricing-bg-text {
-    font-size: 120px;
+  .pricing-container {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    gap: 50px;
   }
 
+  .pricing-bg-text {
+    font-size: 115px;
+  }
   .pricing-title {
     font-size: 26px;
   }
@@ -510,9 +505,15 @@
 }
 
 @media (max-width: 375px) {
+  
+  .pricing-container {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    gap: 50px;
+  }
 
   .pricing-bg-text {
-    font-size: 95px;
+    font-size: 110px;
   }
 
   .pricing-title {

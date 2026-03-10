@@ -385,6 +385,10 @@
     padding: 180px 20px 40px;
   }
 
+   .hosting-section-secondary {
+    margin-bottom: 20px;
+  }
+
   /* Control giant background word */
   .hosting-bg-text {
     font-size: 140px;
@@ -433,7 +437,7 @@
   /* SECOND SECTION STACK */
   .hosting-header {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 10px;
   }
 
   .hosting-heading-secondary {
@@ -463,12 +467,17 @@
 
 @media (max-width: 480px) {
 
+  .hosting-section-secondary {
+    margin-bottom: 20px;
+  }
+
   .hosting-section {
-    padding: 160px 18px 35px;
+    padding: 190px 18px 35px;
   }
 
   .hosting-bg-text {
-    font-size: 110px;
+    font-size: 105px;
+    margin-top: 140px;
   }
 
   .hosting-heading h2 {
@@ -499,9 +508,14 @@
 }
 
 @media (max-width: 375px) {
+  .hosting-section {
+    padding: 180px 18px 35px;
+  }
+
 
   .hosting-bg-text {
-    font-size: 90px;
+     font-size: 95px;
+     margin-top: 145px;
   }
 
   .hosting-heading h2 {
